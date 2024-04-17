@@ -20,6 +20,13 @@ function initializeData() {
 // TASK: Get elements from the DOM
 const elements = {
 
+  // DOM elements for the Navigation Sidebar
+    sideBar: document.getElementById('side-bar-div'),
+    boardsNavLinksDiv: document.getElementById('boards-nav-links-div'),
+    toggleSwitch: document.getElementById('switch'),
+    hideSideBarBtn: document.getElementById('hide-side-bar-btn'),
+    showSideBarBtn: document.getElementById('show-side-bar-btn'),
+  
 }
 
 let activeBoard = ""
