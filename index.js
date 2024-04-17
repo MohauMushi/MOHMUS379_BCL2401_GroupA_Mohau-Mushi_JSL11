@@ -34,7 +34,10 @@ const elements = {
   addNewTaskBtn: document.getElementById('add-new-task-btn'),
   editBoardBtn: document.getElementById('edit-board-btn'),
   deleteBoardBtn: document.getElementById('deleteBoardBtn'),
-  
+
+  // DOM elements for the Main Layout: main content area for task columns
+  columnDivs: document.querySelectorAll('.column-div'),
+  tasksContainers: document.querySelectorAll('.tasks-container'),
 }
 
 let activeBoard = ""
