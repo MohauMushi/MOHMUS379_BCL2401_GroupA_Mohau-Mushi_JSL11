@@ -55,6 +55,9 @@ const elements = {
   saveTaskChangesBtn: document.getElementById('save-task-changes-btn'),
   cancelEditBtn: document.getElementById('cancel-edit-btn'),
   deleteTaskBtn: document.getElementById('delete-task-btn'),
+
+  // Filter Div
+  filterDiv: document.getElementById('filterDiv'),
 }
 
 let activeBoard = ""
