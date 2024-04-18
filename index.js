@@ -41,8 +41,9 @@ const elements = {
 
   // DOM elements for New Task Modal: Form for adding a new task
   newTaskModalWindow: document.getElementById('new-task-modal-window'),
+  titleInput: document.getElementById('title-input'),
+  descInput: document.getElementById('desc-input'),
   
-}
 
 let activeBoard = ""
 
