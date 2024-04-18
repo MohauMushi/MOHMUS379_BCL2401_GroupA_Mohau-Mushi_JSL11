@@ -45,7 +45,7 @@ const elements = {
   descInput: document.getElementById('desc-input'),
   selectStatus: document.getElementById('select-status'),
   createNewTaskBtn: document.getElementById('create-task-btn'),
-  cancelAddTaskBtn: document.getElementById('cancel-add-task-btn')
+  cancelAddTaskBtn: document.getElementById('cancel-add-task-btn'),
 }
 
 let activeBoard = ""
