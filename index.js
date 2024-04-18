@@ -50,6 +50,7 @@ const elements = {
   // DOM elements for Edit Task Modal: Form for editing an existing task's details
   editTaskForm: document.getElementById('edit-task-form'),
   editTaskTitleInput: document.getElementById('edit-task-title-input'),
+  editTaskDescInput: document.getElementById('edit-task-desc-input'),
 }
 
 let activeBoard = ""
