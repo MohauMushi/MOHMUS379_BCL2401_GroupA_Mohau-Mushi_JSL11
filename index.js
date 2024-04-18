@@ -38,6 +38,10 @@ const elements = {
   // DOM elements for the Main Layout: main content area for task columns
   columnDivs: document.querySelectorAll('.column-div'),
   tasksContainers: document.querySelectorAll('.tasks-container'),
+
+  // DOM elements for New Task Modal: Form for adding a new task
+  newTaskModalWindow: document.getElementById('new-task-modal-window'),
+  
 }
 
 let activeBoard = ""
