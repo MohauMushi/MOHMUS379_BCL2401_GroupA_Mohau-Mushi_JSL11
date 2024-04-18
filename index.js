@@ -51,6 +51,7 @@ const elements = {
   editTaskForm: document.getElementById('edit-task-form'),
   editTaskTitleInput: document.getElementById('edit-task-title-input'),
   editTaskDescInput: document.getElementById('edit-task-desc-input'),
+  editSelectStatus: document.getElementById('edit-select-status'),
 }
 
 let activeBoard = ""
