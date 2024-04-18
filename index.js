@@ -43,7 +43,9 @@ const elements = {
   newTaskModalWindow: document.getElementById('new-task-modal-window'),
   titleInput: document.getElementById('title-input'),
   descInput: document.getElementById('desc-input'),
-  
+  selectStatus: document.getElementById('select-status'),
+
+}
 
 let activeBoard = ""
 
