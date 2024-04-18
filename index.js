@@ -48,6 +48,7 @@ const elements = {
   cancelAddTaskBtn: document.getElementById('cancel-add-task-btn'),
 
   // DOM elements for Edit Task Modal: Form for editing an existing task's details
+  editTaskModal: document.querySelector('edit-task-modal-window'),
   editTaskForm: document.getElementById('edit-task-form'),
   editTaskTitleInput: document.getElementById('edit-task-title-input'),
   editTaskDescInput: document.getElementById('edit-task-desc-input'),
