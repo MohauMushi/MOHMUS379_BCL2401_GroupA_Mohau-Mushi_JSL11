@@ -46,6 +46,9 @@ const elements = {
   selectStatus: document.getElementById('select-status'),
   createNewTaskBtn: document.getElementById('create-task-btn'),
   cancelAddTaskBtn: document.getElementById('cancel-add-task-btn'),
+
+  // DOM elements for Edit Task Modal: Form for editing an existing task's details
+  editTaskForm: document.getElementById('edit-task-form'),
 }
 
 let activeBoard = ""
