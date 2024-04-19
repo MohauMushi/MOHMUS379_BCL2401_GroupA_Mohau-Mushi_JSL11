@@ -249,7 +249,7 @@ function addTask(event) {
 
 
 function toggleSidebar(show) {
- 
+    elements.sideBar.style.display = show ? 'block' : 'none';
 }
 
 function toggleTheme() {
