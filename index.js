@@ -250,6 +250,7 @@ function addTask(event) {
 
 function toggleSidebar(show) {
     elements.sideBar.style.display = show ? 'block' : 'none';
+    elements.showSideBarBtn.style.display = show ? 'none' : 'block';
 }
 
 function toggleTheme() {
