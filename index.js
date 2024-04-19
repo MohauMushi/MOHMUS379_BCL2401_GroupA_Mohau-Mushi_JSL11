@@ -21,7 +21,7 @@ function initializeData() {
 const elements = {
 
   // DOM elements for the Navigation Sidebar
-    sideBar: document.getElementById('side-bar-div'),
+    sideBar: document.querySelector('side-bar'),
     boardsNavLinksDiv: document.getElementById('boards-nav-links-div'),
     themeSwitch: document.getElementById('switch'),
     hideSideBarBtn: document.getElementById('hide-side-bar-btn'),
