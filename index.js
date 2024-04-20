@@ -258,6 +258,7 @@ function toggleSidebar(show) {
 
 function toggleTheme() {
 
+  const isLightTheme = elements.body.classList.contains('light-theme');
 
 }
 
