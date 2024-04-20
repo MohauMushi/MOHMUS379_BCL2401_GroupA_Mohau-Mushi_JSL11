@@ -255,6 +255,8 @@ function toggleSidebar(show) {
     elements.sideBar.style.display = show ? 'block' : 'none';
     elements.showSideBarBtn.style.display = show ? 'none' : 'block';
 }
+// Declared a variable isLightMode and assigning it the boolean value true
+let isLightMode = true;
 
 function toggleTheme() {
 
