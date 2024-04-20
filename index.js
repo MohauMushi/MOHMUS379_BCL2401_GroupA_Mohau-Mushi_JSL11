@@ -23,6 +23,7 @@ const elements = {
     body : document.body,
 
   // DOM elements for the Navigation Sidebar
+    headerBoardName: document.getElementById("header-board-name"),
     sideBar: document.querySelector('.side-bar'),
     sideLogoDiv: document.getElementById('logo'),
     sideBarDiv: document.getElementById('side-bar-div'),
