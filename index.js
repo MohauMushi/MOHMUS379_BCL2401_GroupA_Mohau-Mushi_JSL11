@@ -17,6 +17,8 @@ function initializeData() {
   }
 }
 
+initializeData();
+
 // TASK: Get elements from the DOM
 const elements = {
   // DOM element for the body
