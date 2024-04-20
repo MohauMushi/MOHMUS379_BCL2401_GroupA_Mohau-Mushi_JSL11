@@ -19,6 +19,8 @@ function initializeData() {
 
 // TASK: Get elements from the DOM
 const elements = {
+  // DOM element for the body
+    body : document.body,
 
   // DOM elements for the Navigation Sidebar
     sideBar: document.querySelector('.side-bar'),
