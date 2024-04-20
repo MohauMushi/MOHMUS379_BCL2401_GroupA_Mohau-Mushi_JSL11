@@ -264,6 +264,8 @@ function toggleTheme() {
   elements.body.classList.toggle('light-theme');
   localStorage.setItem('light-theme', !isLightTheme ? 'enabled' : 'disabled');
 
+  isLightMode = !isLightMode; // Toggle the mode
+
 }
 
 
