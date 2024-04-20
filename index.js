@@ -260,6 +260,7 @@ function toggleTheme() {
 
   const isLightTheme = elements.body.classList.contains('light-theme');
   elements.body.classList.toggle('light-theme');
+  localStorage.setItem('light-theme', !isLightTheme ? 'enabled' : 'disabled');
 
 }
 
