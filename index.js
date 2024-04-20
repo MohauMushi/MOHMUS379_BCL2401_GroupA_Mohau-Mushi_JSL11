@@ -266,6 +266,12 @@ function toggleTheme() {
 
   isLightMode = !isLightMode; // Toggle the mode
 
+  if (isLightMode) {
+    elements.sideLogoDiv.src = './assets/logo-dark.svg'; // Change to dark mode
+  } else {
+    elements.sideLogoDiv.src = './assets/logo-light.svg'; // Change to light mode
+  }
+
 }
 
 
