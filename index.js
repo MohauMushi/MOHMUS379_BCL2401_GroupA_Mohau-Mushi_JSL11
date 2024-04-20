@@ -24,6 +24,7 @@ const elements = {
 
   // DOM elements for the Navigation Sidebar
     sideBar: document.querySelector('.side-bar'),
+    sideLogoDiv: document.getElementById('logo'),
     sideBarDiv: document.getElementById('side-bar-div'),
     boardsNavLinksDiv: document.getElementById('boards-nav-links-div'),
     themeSwitch: document.getElementById('switch'),
