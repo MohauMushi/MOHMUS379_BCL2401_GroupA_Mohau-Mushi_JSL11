@@ -257,8 +257,8 @@ function toggleSidebar(show) {
 }
 
 function toggleTheme() {
-  let theme = document.body;
-  theme.classList.toggle('light-theme');
+
+
 }
 
 
