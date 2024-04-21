@@ -292,7 +292,10 @@ function openEditTaskModal(task) {
   const editDescInput = document.getElementById('edit-task-desc-input');
   const editStatusSelect = document.getElementById('edit-select-status');
 
-
+  
+  editTitleInput.value = task.title;
+  editDescInput.value = task.description;
+  editStatusSelect.value = task.status;
   
 
   // Get button elements from the task modal
