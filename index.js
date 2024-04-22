@@ -274,8 +274,9 @@ let isLightMode = true;
 
 function toggleTheme() {
 
-  const isLightTheme = elements.body.classList.contains('light-theme');
-  elements.body.classList.toggle('light-theme');
+  // const isLightTheme = elements.body.classList.contains('light-theme');
+  const isLightTheme = elements.themeSwitch.Checked;
+  elements.body.classList.toggle('light-theme', isLightTheme);
   localStorage.setItem('light-theme', !isLightTheme ? 'enabled' : 'disabled');
 
   isLightMode = !isLightMode; // Toggle the mode
@@ -359,6 +360,7 @@ function init() {
   const showSidebar = localStorage.getItem('showSideBar') === 'true';
   toggleSidebar(showSidebar);
   const isLightTheme = localStorage.getItem('light-theme') === 'enabled';
+  elements.themeSwitch.checked = isLightTheme;
   document.body.classList.toggle('light-theme', isLightTheme);
   fetchAndDisplayBoardsAndTasks(); // Initial display of boards and tasks
 }
