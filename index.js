@@ -51,7 +51,7 @@ const elements = {
   titleInput: document.getElementById('title-input'),
   descInput: document.getElementById('desc-input'),
   selectStatus: document.getElementById('select-status'),
-  createNewTaskBtn: document.getElementById('create-task-btn'),
+  createNewTaskBtn: document.getElementById('add-new-task-btn'),
   cancelAddTaskBtn: document.getElementById('cancel-add-task-btn'),
 
   // DOM elements for Edit Task Modal: Form for editing an existing task's details
