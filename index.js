@@ -337,8 +337,8 @@ function saveTaskChanges(taskId) {
   };
 
 
-  // Update task using a hlper function
-  putTask(taskId, updatedTask);
+  // Update task using a helper function
+  patchTask(taskId, updatedTask);
  
 
   // Close the modal and refresh the UI to reflect the changes
