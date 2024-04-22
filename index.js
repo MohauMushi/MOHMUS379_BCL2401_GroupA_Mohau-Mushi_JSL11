@@ -304,7 +304,8 @@ function openEditTaskModal(task) {
 
   // Call saveTaskChanges upon click of Save Changes button
   saveChangesBtn.addEventListener('click', () => {
-    saveTaskChanges(task.id)
+    saveTaskChanges(task.id);
+    refreshTasksUI();
   });
 
 
@@ -312,12 +313,12 @@ function openEditTaskModal(task) {
   deleteTaskBtn.addEventListener('click', () => {
 	  deleteTask(task.id);
 	  toggleModal(false, elements.editTaskModal);
+    refreshTasksUI();
 	})
 
 
-  toggleModal(true, elements.editTaskModal); // Show the edit task modal
-
   refreshTasksUI();
+  toggleModal(true, elements.editTaskModal); // Show the edit task modal
 }
 
 function saveTaskChanges(taskId) {
