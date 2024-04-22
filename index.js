@@ -248,7 +248,11 @@ function addTask(event) {
 
   //Assign user input to the task object
     const task = {
-      
+      id: JSON.parse(localStorage.getItem('id')),
+	    title: elements.titleInput.value,
+	    description: elements.descInput.value,
+	    status: elements.selectStatus.value,
+      board: activeBoard,
     };
     const newTask = createNewTask(task);
     if (newTask) {
