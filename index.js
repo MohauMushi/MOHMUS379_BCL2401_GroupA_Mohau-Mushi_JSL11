@@ -274,9 +274,8 @@ let isLightMode = true;
 
 function toggleTheme() {
 
-  // const isLightTheme = elements.body.classList.contains('light-theme');
-  const isLightTheme = elements.themeSwitch.Checked;
-  elements.body.classList.toggle('light-theme', isLightTheme);
+  const isLightTheme = elements.body.classList.contains('light-theme');
+  elements.body.classList.toggle('light-theme');
   localStorage.setItem('light-theme', !isLightTheme ? 'enabled' : 'disabled');
 
   isLightMode = !isLightMode; // Toggle the mode
