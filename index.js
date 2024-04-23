@@ -322,23 +322,24 @@ function openEditTaskModal(task) {
 	})
 
 
-  refreshTasksUI();
   toggleModal(true, elements.editTaskModal); // Show the edit task modal
+  refreshTasksUI();
 }
 
 function saveTaskChanges(taskId) {
   // Get new user inputs
-  const titleInput = elements.editTaskTitleInput;
-  const descriptionInput = elements.editTaskDescInput ;
-  const selectStatus = elements.editSelectStatus;
+  // const task_id = JSON.parse(localStorage.getItem('id'));
+  const titleInput = elements.editTaskTitleInput.value;
+  const descriptionInput = elements.editTaskDescInput.value ;
+  const selectStatus = elements.editSelectStatus.value;
 
 
   // Create an object with the updated task details
   const updatedTask ={
-    id: JSON.parse(localStorage.getItem('id')),
-	  title: titleInput.value,
-	  description: descriptionInput.value,
-	  status: selectStatus.value,
+    // id: task_id,
+	  title: titleInput,
+	  description: descriptionInput,
+	  status: selectStatus,
     board: activeBoard,
   };
 
@@ -348,6 +349,7 @@ function saveTaskChanges(taskId) {
  
 
   // Close the modal and refresh the UI to reflect the changes
+  location.reload();
   toggleModal(false, elements.editTaskModal);
 
   refreshTasksUI();
