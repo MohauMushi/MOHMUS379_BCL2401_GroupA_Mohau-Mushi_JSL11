@@ -274,21 +274,29 @@ function toggleSidebar(show) {
     elements.showSideBarBtn.style.display = show ? 'none' : 'block';
 }
 // Declared a variable isLightMode and assigning it the boolean value true
-let isLightMode = true;
+// let isLightMode;
+
+// Get the current mode from local storage or set to default (light)
+const currentMode = localStorage.getItem('mode') || 'light';
+let isLightMode = currentMode === 'light';
+
+// Set the initial SVG source based on the current mode
+let sideLogoDivSrc = isLightMode ? './assets/logo-dark.svg' : './assets/logo-light.svg';
+elements.sideLogoDiv.src = sideLogoDivSrc;
+
+
 
 function toggleTheme() {
 
-  const isLightTheme = elements.body.classList.contains('light-theme');
+  const isLightTheme = document.body.classList.contains('light-theme');
   document.body.classList.toggle('light-theme');
   localStorage.setItem('light-theme', !isLightTheme ? 'enabled' : 'disabled');
 
   isLightMode = !isLightMode; // Toggle the mode
-
-  if (isLightMode) {
-    elements.sideLogoDiv.src = './assets/logo-dark.svg'; // Change to dark mode
-  } else {
-    elements.sideLogoDiv.src = './assets/logo-light.svg'; // Change to light mode
-  }
+  sideLogoDivSrc = isLightMode ? './assets/logo-dark.svg' : './assets/logo-light.svg';
+  elements.sideLogoDiv.src = sideLogoDivSrc;
+  localStorage.setItem('mode', isLightMode ? 'light' : 'dark'); // Store the selected mode in localStorage
+  localStorage.setItem('sideLogoDiv', sideLogoDivSrc); // Store the selected SVG source in localStorage
 
 }
 
@@ -379,6 +387,9 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 function init() {
+  if (localStorage.getItem('sideLogoDiv') === './assets/logo-light.svg') {
+    elements.sideLogoDiv.src = './assets/logo-light.svg';
+  }
   setupEventListeners();
   const showSidebar = localStorage.getItem('showSideBar') === 'true';
   toggleSidebar(showSidebar);
