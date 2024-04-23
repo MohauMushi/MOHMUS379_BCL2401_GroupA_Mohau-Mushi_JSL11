@@ -21,8 +21,6 @@ initializeData();
 
 // TASK: Get elements from the DOM
 const elements = {
-  // DOM element for the body
-    body : document.body,
 
   // DOM elements for the Navigation Sidebar
     headerBoardName: document.getElementById("header-board-name"),
@@ -281,7 +279,7 @@ let isLightMode = true;
 function toggleTheme() {
 
   const isLightTheme = elements.body.classList.contains('light-theme');
-  elements.body.classList.toggle('light-theme');
+  document.body.classList.toggle('light-theme');
   localStorage.setItem('light-theme', !isLightTheme ? 'enabled' : 'disabled');
 
   isLightMode = !isLightMode; // Toggle the mode
