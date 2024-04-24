@@ -1,10 +1,10 @@
 // TASK: import helper functions from utils
-// TASK: import initialData
 import {getTasks, createNewTask, patchTask, putTask, deleteTask} from './utils/taskFunctions.js';
+// TASK: import initialData
 import {initialData} from './initialData.js';
 
 /*************************************************************************************************************************************************
- * FIX BUGS!!!
+ * 
  * **********************************************************************************************************************************************/
 
 // Function checks if local storage already has data, if not it loads initialData to localStorage
@@ -19,7 +19,7 @@ function initializeData() {
 
 initializeData();
 
-// TASK: Get elements from the DOM
+// Getting the elements from the DOM
 const elements = {
 
   // DOM elements for the Navigation Sidebar
@@ -69,7 +69,6 @@ const elements = {
 let activeBoard = ""
 
 // Extracts unique board names from tasks
-// TASK: FIX BUGS
 function fetchAndDisplayBoardsAndTasks() {
   const tasks = getTasks();
   const boards = [...new Set(tasks.map(task => task.board).filter(Boolean))];
@@ -84,7 +83,6 @@ function fetchAndDisplayBoardsAndTasks() {
 }
 
 // Creates different boards in the DOM
-// TASK: Fix Bugs
 function displayBoards(boards) {
   const boardsContainer = document.getElementById("boards-nav-links-div");
   boardsContainer.innerHTML = ''; // Clears the container
@@ -106,7 +104,6 @@ function displayBoards(boards) {
 
 
 // Filters tasks corresponding to the board name and displays them on the DOM.
-// TASK: Fix Bugs
 function filterAndDisplayTasksByBoard(boardName) {
   const tasks = getTasks(); // Fetch tasks from a simulated local storage function
   const filteredTasks = tasks.filter(task => task.board === boardName);
@@ -145,8 +142,7 @@ function refreshTasksUI() {
   filterAndDisplayTasksByBoard(activeBoard);
 }
 
-// Styles the active board by adding an active class
-// TASK: Fix Bugs
+// Styled the active board by adding an active class
 function styleActiveBoard(boardName) {
   document.querySelectorAll('.board-btn').forEach(btn => { 
     
@@ -177,7 +173,7 @@ function addTaskToUI(task) {
 
   const taskElement = document.createElement('div');
   taskElement.className = 'task-div';
-  taskElement.textContent = task.title; // Modify as needed
+  taskElement.textContent = task.title;
   taskElement.setAttribute('data-task-id', task.id);
   
   tasksContainer.appendChild(taskElement); 
@@ -199,7 +195,7 @@ function setupEventListeners() {
 
   // Clicking outside the modal to close it
   elements.filterDiv.addEventListener('click', () => {
-    toggleModal(false);
+    // toggleModal(false); TODO
     elements.filterDiv.style.display = 'none'; // Also hide the filter overlay
   });
 
@@ -226,7 +222,6 @@ function setupEventListeners() {
 }
 
 // Toggles tasks modal
-// Task: Fix bugs
 function toggleModal(show, modal = elements.modalWindow) {
   modal.style.display = show ? 'block' : 'none'; 
 }
@@ -241,12 +236,13 @@ elements.boardsNavLinksDiv.style.marginBottom = '17rem';
 function addTask(event) {
   event.preventDefault(); 
 
-  //Assign user input to the task object
+  
     const task_id = JSON.parse(localStorage.getItem('id'));
     const titleInput = elements.titleInput.value;
     const descriptionInput = elements.descInput.value;
     const selectStatus = elements.selectStatus.value;
 
+    //Assigning user input to the task object
     const task = {
       'id': task_id,
 	    'title': titleInput,
@@ -270,8 +266,6 @@ function toggleSidebar(show) {
     elements.sideBar.style.display = show ? 'block' : 'none';
     elements.showSideBarBtn.style.display = show ? 'none' : 'block';
 }
-// Declared a variable isLightMode and assigning it the boolean value true
-// let isLightMode;
 
 // Get the current mode from local storage or set to default (light)
 const currentMode = localStorage.getItem('mode') || 'light';
@@ -331,8 +325,7 @@ function openEditTaskModal(task) {
 }
 
 function saveTaskChanges(taskId) {
-  // Get new user inputs
-  // const task_id = JSON.parse(localStorage.getItem('id'));
+  // Get new user inputs from the elements
   const titleInput = elements.editTaskTitleInput.value;
   const descriptionInput = elements.editTaskDescInput.value ;
   const selectStatus = elements.editSelectStatus.value;
@@ -340,7 +333,6 @@ function saveTaskChanges(taskId) {
 
   // Create an object with the updated task details
   const updatedTask ={
-    // id: task_id,
 	  title: titleInput,
 	  description: descriptionInput,
 	  status: selectStatus,
