@@ -104,11 +104,6 @@ function displayBoards(boards) {
 
 }
 
-const columnTitles = {
-  todo: 'TODO',
-  doing: 'DOING',
-  done: 'DONE',
-}
 
 // Filters tasks corresponding to the board name and displays them on the DOM.
 // TASK: Fix Bugs
@@ -121,10 +116,9 @@ function filterAndDisplayTasksByBoard(boardName) {
   elements.columnDivs.forEach(column => {
     const status = column.getAttribute("data-status");
     // Reset column content while preserving the column title
-    const columnTitle = columnTitles[status];
     column.innerHTML = `<div class="column-head-div">
                           <span class="dot" id="${status}-dot"></span>
-                          <h4 class="columnHeader">${columnTitle.toUpperCase()}</h4>
+                          <h4 class="columnHeader">${status.toUpperCase()}</h4>
                         </div>`;
 
     const tasksContainer = document.createElement("div");
