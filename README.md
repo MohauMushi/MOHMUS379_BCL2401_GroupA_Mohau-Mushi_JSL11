@@ -8,6 +8,17 @@ Furthermore, the project delves into enhancing the application by crafting code 
 
 ![alt text](assets/JSL11_solution.gif)
 
+## Tech Stack Used
+<div align="left"> 
+<a href="https://en.wikipedia.org/wiki/HTML5" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/html5-original-wordmark.svg" alt="HTML5" height="50" /></a> 
+<a href="https://www.w3schools.com/css/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/css3-original-wordmark.svg" alt="CSS3" height="50" /></a>  
+<a href="https://www.javascript.com/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/javascript-original.svg" alt="JavaScript" height="50" /></a> 
+</div>
+
+
+# Improvements
+The improvement taht can be added can, for the Task Management App to be able to adupt to smaller screen sizes, not only to the laptop sizes. Also another improvement that can be added is for the application to have a toggle menu when it's in smaller screens, so that the sidebar can properly hide and show correctly.
+
 
 # Challenges Faced
 
@@ -21,7 +32,7 @@ The `toggleTheme()` function presented another significant challenge, particular
 Furthermore, within the `toggleTheme()` function, an additional challenge arose in the management of the `isLightMode` sideLogoDiv source in local storage. This presented a crucial aspect of user experience, as it aimed to preserve the appropriate sideLogoDiv source in line with the selected theme, even after the user refreshed the tab. This challenge involved implementing robust storage mechanisms to accurately retain the user's preferred theme and associated visual `isLightTheme`, contributing to a seamless and consistent user experience.
 
 
-# 📚 What I Learned:
+# 📚 Learning Outcome:
 Through the Agile Board project, I gained invaluable experience in debugging and enhancing code functionality. This project provided an opportunity to refine my skills in identifying and rectifying bugs, as well as developing new functions to meet specific user story requirements. Importantly, I honed my critical thinking and problem-solving abilities, The hands-on nature of the project equipped me with practical knowledge that is directly applicable to real-world scenarios, offering a meaningful glimpse into the demands of professional software development.
 
 In overcoming these challenges, I gained valuable insights into the intricate details of code functionality, local storage management, and user experience considerations. Each obstacle served as an opportunity for growth, allowing me to refine my problem-solving skills and deepen my understanding of effective code implementation and data persistence strategies.
